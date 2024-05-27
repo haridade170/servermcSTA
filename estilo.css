@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'lemonmilk';
+    src: url('fonts/lemonmilk.otf') format('truetype');
+}
+
+html {
+    font-size: medium;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif medium;
+    color: white;
+    background-image: url('base3.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    font-family: 'lemonmilk', sans-serif;   
+    margin: 0;
+    padding-top: 60px;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40%;
+    margin-left: 48%;
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    box-shadow: gray (0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    transition: width 0.3 ease;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+}
+
+.aprs {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    height: auto;
+    color: white;
+}
+
+.his{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    color: white;  
+}
+
+.cards {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid rgb(190, 190, 190);
+    background-color: rgb(43, 43, 43);
+    color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    font-size: medium;
+}
+
+.cards:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 12px 16px rgba(255, 255, 255, 0.2);
+
+}
+.botao, .botao2 {
+    color: rgb(119, 119, 119);
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    display: block;
+    text-align: center;
+}
+
+.botao:hover, .botao2:hover {
+    color: rgb(255, 255, 255);
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.botao::after, .botao2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #ffffff;
+    transition: width 0.2s;
+    bottom: 0;
+    left: 0;
+}
+
+.botao:hover::after, .botao2:hover::after {
+    width: 100%;
+}
+
+.footer{
+    background-color: black; 
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.footer p{
+    color: gray;
+    background-color: #33333311;
+    transition: background-color 0.3s ease;
+   max-width: 300px;
+   margin: auto;
+   font-size: 12px;
+}
+
+.footer p:hover{
+    color: rgb(0, 0, 0);   
+    background-color: #ffffffcc;
+    transition: width 0.3 ease;
+    transition: heigth 0.3 ease;
+    box-shadow: rgb(255, 255, 255) 0px 5px 4px;
+    border-radius: 3px;
+}
+
+
+
+
+
+.aprs img{
+   max-width: 200px;
+   max-height: 200px;
+}
+
+.quiz{
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: xx-small;
+        width: 58%;
+    }
+
+    .logo img {
+        width: 35px;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .aprs {
+        max-width: 60%;
+        margin: auto;
+        max-height: 70%;
+    }
+
+    .his{
+        max-width: 80%;
+        margin: auto;
+    } .quiz
+
+    .cards {
+        width: 40%;
+        margin: 10px 0;
+    }
+
+    .cards img {
+        width: 35px; /* Ajuste para tablets */
+    }
+}  
+
+
+.quiz {
+    background-color: #0000008f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.quiz h1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.quiz label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+
+.quiz input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+.quiz input[type="submit"] {
+    background-color: #1f1f1f;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.quiz input[type="submit"]:hover {
+    background-color: #ffffff;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+   
+}
+
+.quiz-result {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
